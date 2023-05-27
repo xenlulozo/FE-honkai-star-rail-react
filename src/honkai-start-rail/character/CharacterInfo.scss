@@ -1,0 +1,54 @@
+.container {
+    .container-full {
+        z-index: 100 !important;
+        .info {
+            display: flex;
+            margin: 50px 0px;
+            align-items: center;
+
+            // background-color: red;
+            .avt-character {
+                // width: 100px;
+                // height: 100px;
+                background-color: yellow;
+                background: linear-gradient(180deg, #885550, #c9a36a 53%);
+                // background-color: black;
+            }
+            .default-info {
+                h1 {
+                    font-size: 36px;
+                }
+                span {
+                    background-color: #36374d;
+                    padding: 5px 10px;
+                }
+            }
+        }
+        .content-skill {
+            text-align: left;
+            .skills.selected {
+                background-color: rgba(#1b1b1b, 0.9);
+                /* some other styles here */
+            }
+            .skills {
+                // font-size: 25px;
+                padding: 0px 20px;
+                border-radius: 5px;
+                border: 1px rgba(195, 195, 195, 0.2) solid;
+                // background-color: #2c2d33;
+                background-color: rgba(#27282c, 0.9);
+                .name {
+                    span {
+                        padding: 0px 10px;
+                        border-radius: 2px;
+                        font-size: 19px;
+                        height: 32px;
+                        background-color: #484950;
+                    }
+                }
+                .desc {
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.container {
+    text-align: left;
+    font-size: 20px;
+
+    h2 {
+        font-size: 23px;
+    }
+    .fake {
+        // display: flex;
+        justify-content: space-between;
+
+        // flex-direction: row;
+        .traces-items {
+            // width: 32%;
+            border: 1px rgba(195, 195, 195, 0.2) solid;
+            padding: 0px 20px;
+            border-radius: 5px;
+            border: 1px rgba(195, 195, 195, 0.2) solid;
+            // background-color: #2c2d33;
+            background-color: rgba(#27282c, 0.9);
+            .info-traces {
+                span {
+                    padding: 5px 10px;
+                    border-radius: 2px;
+                    font-size: 19px;
+                    height: 32px;
+                    background-color: #484950;
+                }
+            }
+            .desc-traces {
+            }
+            .container-sub-traces {
+                .show-hide-sub-traces {
+                    color: #099eec;
+                }
+                .sub-traces {
+                    border: 1px rgba(195, 195, 195, 0.2) solid;
+                    background-color: #34353b;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    p {
+                        color: #ffffff8c;
+                    }
+                }
+            }
+        }
+    }
+}
