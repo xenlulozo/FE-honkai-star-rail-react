@@ -26,21 +26,21 @@ import Background from "./honkai-start-rail/character/Background";
 function App() {
   const [isNavFixed, setIsNavFixed] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const navHeight = document.querySelector("nav").offsetHeight;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     const navHeight = document.querySelector("nav").offsetHeight;
 
-      if (scrollY > navHeight) {
-        setIsNavFixed(true);
-      } else {
-        setIsNavFixed(false);
-      }
-    };
+  //     if (scrollY > navHeight) {
+  //       setIsNavFixed(true);
+  //     } else {
+  //       setIsNavFixed(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const handleNavClick = (target) => {
     scroll.scrollTo(target, {
