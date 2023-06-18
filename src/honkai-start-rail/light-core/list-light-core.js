@@ -147,7 +147,7 @@ export default function ListLightCore() {
                           </div>
                           <div className="img">
                             <img
-                              src={` /img/path/path_the_${item.path}.png`}
+                              src={` /img/path/path_the_${item.path.toLowerCase()}.png`}
                             ></img>
                           </div>
                         </div>
@@ -173,7 +173,7 @@ export default function ListLightCore() {
                             <span className="content-path d-flex">
                               {" "}
                               <img
-                                src={`/img/path/path_the_${item.element}.png`}
+                                src={`/img/path/path_the_${item.element.toLowerCase()}.png`}
                                 className="d-inline my-1"
                               ></img>
                               <div>

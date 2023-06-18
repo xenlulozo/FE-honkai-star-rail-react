@@ -8,7 +8,12 @@ export default function ListLightCore() {
 
   useEffect(() => {
     axios
-      .get(`https://hsr-database.onrender.com/relic`)
+      .get(`https://hsr-database.onrender.com/relic`, {
+        withCredentials: true,
+        headers: {
+          Referrer: "https://fe-honkai-star-rail-react.vercel.app/",
+        },
+      })
       .then((response) => {
         setData(response.data);
       })

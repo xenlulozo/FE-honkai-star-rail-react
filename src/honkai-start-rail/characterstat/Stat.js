@@ -284,7 +284,7 @@ export default function CharacterStat() {
                           </div>
                           <div className="img">
                             <img
-                              src={` /img/element/${item.element}.png`}
+                              src={` /img/element/${item.element.toLowerCase()}.png`}
                             ></img>
                           </div>
                         </div>
@@ -344,7 +344,7 @@ export default function CharacterStat() {
                           </div>
                           <div className="img">
                             <img
-                              src={` /img/path/path_the_${item.path}.png`}
+                              src={` /img/path/path_the_${item.path.toLowerCase()}.png`}
                             ></img>
                           </div>
                         </div>
@@ -432,7 +432,7 @@ export default function CharacterStat() {
                             <div className="icon">
                               {" "}
                               <img
-                                src={`/img/element/views/${item.element}_sm.png`}
+                                src={`/img/element/views/${item.element.toLowerCase()}_sm.png`}
                               />
                             </div>
                             <div className="img">
