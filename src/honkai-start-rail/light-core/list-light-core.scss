@@ -1,0 +1,94 @@
+.container {
+    .content-light-core {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: 575.98px) {
+            // .fill-container {
+            // span {
+            font-size: 1rem;
+            h4 {
+                font-size: 1.2rem;
+            }
+            // }
+
+            // }
+        }
+        .fill-container {
+            @media (max-width: 575.98px) {
+                // .fill-container {
+                width: 100%;
+
+                // }
+            }
+            width: 49%;
+            border-radius: 0.5rem;
+            background-color: rgba(56, 58, 66, 0.5);
+            border: 1px rgba(195, 195, 195, 0.1) solid;
+            padding: 1rem 1rem;
+            button {
+                background-color: rgba(56, 58, 66, 0.9);
+            }
+            .light-core-info {
+                .img-container {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 0.2rem;
+                    background-color: yellow;
+                    background: linear-gradient(180deg, #885550, #c9a36a 53%);
+                    img {
+                        width: 100%;
+                    }
+                }
+                .detail-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1rem 1rem;
+                    .text-detail {
+                        .content-path {
+                            padding: 0px 10px;
+                            border-radius: 2px;
+                            // font-size: 19px;
+
+                            background-color: #484950;
+                            // .path-img {
+                            //     align-items: center;
+
+                            img {
+                                height: 30px;
+                                width: 30px;
+                            }
+                            // }
+                            span {
+                            }
+                        }
+                        // white-space: nowrap;
+                    }
+                }
+            }
+            .light-core-content {
+                .stat-content {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .items-stat {
+                        background-color: #484950;
+                        border-radius: 0.2rem;
+                    }
+                }
+            }
+            .accordion {
+                --bs-accordion-bg: rgba(#2c2d33, 0.7);
+                --bs-accordion-border-color: rgba(195, 195, 195, 0.1);
+                color: white !important;
+                --bs-accordion-active-color: white;
+                --bs-accordion-color: white;
+                --bs-accordion-btn-color: white;
+                --bs-accordion-active-bg: rgba(56, 58, 66, 0.9);
+            }
+            .description-header {
+                background-color: rgba(56, 58, 66, 0.9);
+            }
+        }
+    }
+}

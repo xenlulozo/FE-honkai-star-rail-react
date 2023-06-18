@@ -17,24 +17,27 @@ import { useParams } from "react-router-dom";
 import CharacterInfo from "./CharacterInfo";
 import CharacterSkills from "./CharacterSkills";
 import CharacterTraces from "./CharacterTraces";
-
-import id_1 from "../img/1_sm.webp";
-import id_2 from "../img/2_sm.webp";
-import id_3 from "../img/3_sm.webp";
-import id_4 from "../img/4_sm.webp";
-import id_5 from "../img/5_sm.webp";
-import id_6 from "../img/6_sm.webp";
-import id_7 from "../img/7_sm.webp";
-import id_8 from "../img/8_sm.webp";
+import Eidolon from "./Eidolon";
 
 import { useCharacterId } from "./CharacterIdContext";
 import Background from "./Background";
 import Testcss from "./Testcss";
+
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
+
 import "./Backgrond.scss";
 function FullCharacter() {
   const [isNavFixed, setIsNavFixed] = useState(false);
   const characterId = useCharacterId();
+  const [checked, setChecked] = useState(false);
+  const [radioValue, setRadioValue] = useState("1");
 
+  const radios = [
+    { name: "Active", value: "1" },
+    { name: "Radio", value: "2" },
+    { name: "Radio", value: "3" },
+  ];
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -58,10 +61,11 @@ function FullCharacter() {
       duration: 500,
     });
   };
+
   return (
     <>
       {/* <Background /> */}
-      <img className="test" src={`/img/${id}_full.webp`}></img>
+      <img className="test select-none" src={`/img/${id}_full.webp`}></img>
 
       <div className="container" style={{ zIndex: 100 }}>
         {/* <div
@@ -94,7 +98,6 @@ function FullCharacter() {
                   position: isNavFixed ? "fixed" : "relative",
                   top: 0,
                   left: 0,
-                  right: 80,
                   width: "100%",
                   zIndex: 999,
 
@@ -105,11 +108,13 @@ function FullCharacter() {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="justify-content-center" fill>
-                      <Nav.Item className="mx-3">
+                      <Nav.Item className="mx-3 ">
                         <ScrollLink
                           to="characterInfo"
                           smooth={true}
                           duration={100}
+                          activeClass="active"
+                          spy={true}
                         >
                           Info
                         </ScrollLink>
@@ -119,6 +124,8 @@ function FullCharacter() {
                           to="characterSkills"
                           smooth={true}
                           duration={100}
+                          activeClass="active"
+                          spy={true}
                         >
                           Skills
                         </ScrollLink>
@@ -128,8 +135,21 @@ function FullCharacter() {
                           to="characterTraces"
                           smooth={true}
                           duration={100}
+                          activeClass="active"
+                          spy={true}
                         >
                           Traces
+                        </ScrollLink>
+                      </Nav.Item>
+                      <Nav.Item className="mx-3">
+                        <ScrollLink
+                          to="Eidolon"
+                          smooth={true}
+                          duration={100}
+                          activeClass="active"
+                          spy={true}
+                        >
+                          Eidolon
                         </ScrollLink>
                       </Nav.Item>
                     </Nav>
@@ -144,7 +164,9 @@ function FullCharacter() {
             <div id="characterTraces">
               <CharacterTraces />
             </div>
-
+            <div id="Eidolon">
+              <Eidolon />
+            </div>
             {/* TextTruncate */}
           </div>
         </div>

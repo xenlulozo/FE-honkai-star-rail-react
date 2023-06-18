@@ -27,8 +27,8 @@ function CharacterTraces() {
   const isSmallScreen = window.innerWidth < 768;
   return (
     <>
-      <div className="container">
-        <h3> Traces</h3>
+      <div className="container my-5">
+        <h2 className="my-4"> Traces</h2>
         <div
           className="fake col-12 d-lg-flex"
           // className={
@@ -60,7 +60,7 @@ function CharacterTraces() {
                       </div>
                     </div>
                     <div className="desc-traces my-4">
-                      <div>{traces[0].desc}</div>
+                      <span>{traces[0].desc}</span>
                     </div>
                     <div className="container-sub-traces col-12 my-2">
                       <span
@@ -81,11 +81,14 @@ function CharacterTraces() {
                                     <div className="sub-traces my-3">
                                       <div>
                                         {" "}
-                                        {sub.stat} + {sub.value} %
+                                        <span>
+                                          {" "}
+                                          {sub.stat} + {sub.value} %
+                                        </span>
+                                        <span className="p d-block">
+                                          Unlocks at <strong>{sub.req}</strong>
+                                        </span>
                                       </div>
-                                      <p>
-                                        Unlocks at <strong>{sub.req}</strong>
-                                      </p>
                                     </div>
                                   </>
                                 );

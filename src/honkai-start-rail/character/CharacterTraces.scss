@@ -8,7 +8,25 @@
     .fake {
         // display: flex;
         justify-content: space-between;
-
+        @media (max-width: 575.98px) {
+            .traces-items {
+                .info-traces {
+                    div {
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .desc-traces {
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
         // flex-direction: row;
         .traces-items {
             // width: 32%;
@@ -17,7 +35,9 @@
             border-radius: 5px;
             border: 1px rgba(195, 195, 195, 0.2) solid;
             // background-color: #2c2d33;
-            background-color: rgba(#27282c, 0.9);
+            background-color: rgba(#27282c, 0.7);
+            // filter: blur(1px);
+
             .info-traces {
                 span {
                     padding: 5px 10px;
@@ -40,8 +60,13 @@
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    p {
-                        color: #ffffff8c;
+                    div {
+                        text-align: center;
+                        align-items: center;
+                        .p {
+                            color: #ffffff8c;
+                            padding: 0;
+                        }
                     }
                 }
             }

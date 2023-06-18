@@ -43,28 +43,43 @@ function CharacterInfo() {
       <div className="container">
         {data &&
           data.map((item, index) => {
-            let infoCharacter =
-              item.json_data && item.json_data && JSON.parse(item.json_data);
+            let infoCharacter = item.json_data && item.json_data;
 
-            let skillCharacter =
-              infoCharacter.skills && JSON.parse(infoCharacter.skills);
+            let skillCharacter = infoCharacter.skills;
             let imagePath = `/img/${infoCharacter.id}_sm.webp`;
-            console.log(imagePath);
+            // console.log(imagePath);
 
             // console.log("itwem", skillCharacter);
             return (
               <>
-                <div className="col-12 info d-flex">
-                  <div className="avt-character">
+                <div className="col-12 info d-lg-flex">
+                  <div className="avt-character col-12 col-lg-2">
                     <img src={imagePath}></img>
                   </div>
-                  <div className="default-info mx-3">
+                  <div className="default-info mx-lg-5 col-12  col-lg-10 ">
                     {" "}
-                    <h1>
-                      {" "}
-                      {infoCharacter.name} ( {infoCharacter.rarity}★ )
-                    </h1>
-                    <span> {infoCharacter.element}</span>
+                    <h1> {infoCharacter.name} </h1>
+                    <div className="desc">
+                      <div className="element d-inline-flex me-3 px-2 my-2   border-bottom border-warning">
+                        <span className="star"> {infoCharacter.rarity}★ </span>
+                      </div>
+                      <div className="element d-inline-flex me-3 px-2 my-2  border-bottom border-warning">
+                        <div className="img-element ">
+                          <img
+                            src={`/img/element/${infoCharacter.element}.png`}
+                          ></img>{" "}
+                        </div>
+                        <span> {infoCharacter.element}</span>
+                      </div>
+                      <div className="element d-inline-flex me-3 px-2 my-2 border-bottom border-warning">
+                        <div className="img-element ">
+                          <img
+                            src={`/img/path/path_the_${infoCharacter.path}.png`}
+                          ></img>{" "}
+                        </div>
+                        <span> {infoCharacter.path}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="content-skill"></div>

@@ -23,6 +23,9 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import FullCharacter from "./honkai-start-rail/character/FullCharacter";
 import { CharacterIdProvider } from "./honkai-start-rail/character/CharacterIdContext";
 import Background from "./honkai-start-rail/character/Background";
+import ListLightCore from "./honkai-start-rail/light-core/list-light-core";
+import Relics from "./honkai-start-rail/relics/Relics";
+import CharacterStat from "./honkai-start-rail/characterstat/Stat";
 function App() {
   const [isNavFixed, setIsNavFixed] = useState(false);
 
@@ -56,8 +59,9 @@ function App() {
         </div> */}
 
         <Router>
+          <Menu />
           <Routes>
-            <Route exact path="/" element={<ListCharacter />} />
+            <Route exact path="/character" element={<ListCharacter />} />
             <Route
               exact
               path="/character/:id"
@@ -69,10 +73,37 @@ function App() {
                 // </CharacterIdProvider>
               }
             />
+            <Route
+              exact
+              path="lightcore"
+              element={
+                <>
+                  <ListLightCore />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="relics"
+              element={
+                <>
+                  <Relics />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="stat"
+              element={
+                <>
+                  <CharacterStat />
+                </>
+              }
+            />
           </Routes>
         </Router>
 
-        {/* <Footer /> */}
+        <Footer />
       </header>
     </div>
   );

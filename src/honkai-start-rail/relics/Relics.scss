@@ -1,0 +1,42 @@
+.container {
+    .content-relics {
+        @media (max-width: 575.98px) {
+            font-size: 1rem;
+        }
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .container-relics {
+            @media (max-width: 575.98px) {
+                // .fill-container {
+                width: 100%;
+
+                // }
+            }
+            width: 49%;
+            border-radius: 0.5rem;
+            background-color: rgba(56, 58, 66, 0.5);
+            border: 1px rgba(195, 195, 195, 0.1) solid;
+            padding: 1rem 1rem;
+            .img-container {
+                align-items: center;
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+            .relics-info {
+                .relics-desc {
+                    .desc-number {
+                        text-align: center;
+                        min-width: 35px;
+                        max-height: 35px;
+                        background-color: rgba(79, 80, 86, 0.5);
+                        border: 1px rgba(195, 195, 195, 0.1) solid;
+
+                        border-radius: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
