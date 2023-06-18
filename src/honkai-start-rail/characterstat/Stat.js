@@ -23,7 +23,7 @@ export default function CharacterStat() {
   const [indexSelected, setIndexSelected] = useState(null);
   useEffect(() => {
     axios
-      .get("http://localhost:3333/path")
+      .get("https://hsr-database.onrender.com/path")
       .then((response) => {
         setPath(
           response.data &&
@@ -36,7 +36,7 @@ export default function CharacterStat() {
         console.log(error);
       });
     axios
-      .get("http://localhost:3333/element")
+      .get("https://hsr-database.onrender.com/element")
       .then((response) => {
         setElement(
           response.data &&
@@ -48,7 +48,7 @@ export default function CharacterStat() {
         console.log(error);
       });
     axios
-      .get(`http://localhost:3333/characterstat`)
+      .get(`https://hsr-database.onrender.com/characterstat`)
       .then((response) => {
         setData(response.data);
         setFilter(response.data);

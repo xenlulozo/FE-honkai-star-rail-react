@@ -17,7 +17,7 @@ export default function ListLightCore() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3333/path")
+      .get("https://hsr-database.onrender.com/path")
       .then((response) => {
         setPath(
           response.data &&
@@ -30,7 +30,7 @@ export default function ListLightCore() {
       });
 
     axios
-      .get(`http://localhost:3333/lightcore`)
+      .get(`https://hsr-database.onrender.com/lightcore`)
       .then((response) => {
         setData(response.data);
         setFilter(response.data);

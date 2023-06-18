@@ -8,7 +8,7 @@ export default function ListLightCore() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3333/relic`)
+      .get(`https://hsr-database.onrender.com/relic`)
       .then((response) => {
         setData(response.data);
       })

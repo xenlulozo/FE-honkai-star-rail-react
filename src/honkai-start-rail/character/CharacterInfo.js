@@ -25,7 +25,7 @@ function CharacterInfo() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3333/info/${id}`)
+      .get(`https://hsr-database.onrender.com/info/${id}`)
       .then((response) => {
         setData(response.data);
       })

@@ -20,7 +20,7 @@ function CharacterSkills() {
 
   useEffect(() => {
     // axios
-    //   .get(`http://localhost:3333/info/${id}`)
+    //   .get(`https://hsr-database.onrender.com/info/${id}`)
     //   .then((response) => {
     //     setData(response.data);
     //     console.log(response.data[0].json_data.skills);
@@ -29,7 +29,7 @@ function CharacterSkills() {
     //     console.log(error);
     //   });
     axios
-      .get(`http://localhost:3333/skills/${id}`)
+      .get(`https://hsr-database.onrender.com/skills/${id}`)
       .then((response) => {
         setData(response.data);
         // console.log(response.data);

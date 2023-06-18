@@ -13,7 +13,7 @@ export default function Eidolon() {
   const [indexSelected, setIndexSelected] = useState(null);
   useEffect(() => {
     axios
-      .get(`http://localhost:3333/eidolon/${id}`)
+      .get(`https://hsr-database.onrender.com/eidolon/${id}`)
       .then((response) => {
         // setData(JSON.parse(response.data[0].eidolon));
         // console.log(

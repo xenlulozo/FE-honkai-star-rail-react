@@ -30,7 +30,7 @@ function ListCharacter() {
   //   const location = history.location;
   useEffect(() => {
     axios
-      .get("http://localhost:3333/path")
+      .get("https://hsr-database.onrender.com/path")
       .then((response) => {
         setPath(
           response.data &&
@@ -42,7 +42,7 @@ function ListCharacter() {
         console.log(error);
       });
     axios
-      .get("http://localhost:3333/element")
+      .get("https://hsr-database.onrender.com/element")
       .then((response) => {
         setElement(
           response.data &&
@@ -54,7 +54,7 @@ function ListCharacter() {
         console.log(error);
       });
     axios
-      .get("http://localhost:3333/list")
+      .get("https://hsr-database.onrender.com/list")
       .then((response) => {
         setData(
           response.data &&

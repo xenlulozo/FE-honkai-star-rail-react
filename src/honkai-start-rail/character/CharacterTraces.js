@@ -11,7 +11,7 @@ function CharacterTraces() {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:3333/traces/${id}`)
+      .get(`https://hsr-database.onrender.com/traces/${id}`)
       .then((response) => {
         setData(response.data);
         // console.log(response.data);

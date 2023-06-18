@@ -13,7 +13,7 @@ function ListCharacter() {
   useEffect(() => {
     alert("re-render");
     axios
-      .get("http://localhost:3333/list")
+      .get("https://hsr-database.onrender.com/list")
       .then((response) => {
         setFilter(
           response.data &&
