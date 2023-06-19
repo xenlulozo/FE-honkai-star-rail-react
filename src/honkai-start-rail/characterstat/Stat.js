@@ -366,7 +366,7 @@ export default function CharacterStat() {
                 }`}
                 onClick={() => handelSort("name")}
               >
-                Max LV. <span className="d-lg-inline d-none">Character</span>
+                <span className="d-lg-inline d-none"> Max LV.</span>Character
               </div>
               <div
                 className={`col-2 py-2  ${
