@@ -3,6 +3,7 @@ import axios from "axios";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// import "./CharacterInfo.scss";
 import "./CharacterInfo.scss";
 import { useParams } from "react-router-dom";
 import CharacterTraces from "./CharacterTraces";
@@ -66,7 +67,7 @@ function CharacterInfo() {
                       <div className="element d-inline-flex me-3 px-2 my-2  border-bottom border-warning">
                         <div className="img-element ">
                           <img
-                            src={`/img/element/${infoCharacter.element}.png`}
+                            src={`/img/element/${infoCharacter.element.toLowerCase()}.png`}
                           ></img>{" "}
                         </div>
                         <span> {infoCharacter.element}</span>
@@ -74,7 +75,7 @@ function CharacterInfo() {
                       <div className="element d-inline-flex me-3 px-2 my-2 border-bottom border-warning">
                         <div className="img-element ">
                           <img
-                            src={`/img/path/path_the_${infoCharacter.path}.png`}
+                            src={`/img/path/path_the_${infoCharacter.path.toLowerCase()}.png`}
                           ></img>{" "}
                         </div>
                         <span> {infoCharacter.path}</span>

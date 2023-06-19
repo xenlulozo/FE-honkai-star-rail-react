@@ -222,7 +222,7 @@ function ListCharacter() {
 
           <div className="filter-container mt-5">
             <div className="filter-content col-12 d-flex ">
-              <div className="row-items col-lg-5 col-12 d-flex my-3">
+              <div className="row-items col-lg-5 col-12 d-flex my-1">
                 <div
                   className={`items all ${getObjectClassName(0, "all")}`}
                   onClick={() => {
@@ -282,7 +282,7 @@ function ListCharacter() {
 
               {/* <div className="filters-divider "></div> */}
 
-              <div className="row-items col-lg-5 col-12 d-flex my-3">
+              <div className="row-items col-lg-5 col-12 d-flex my-1">
                 <div
                   className={`items all-path ${getObjectClassName1(0, "all")}`}
                   onClick={() => {
