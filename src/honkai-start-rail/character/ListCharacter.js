@@ -9,8 +9,8 @@ import "./ListCharacter.scss";
 function ListCharacter() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
-  const [elementSelected, setElementSelected] = useState("");
-  const [pathSelected, setPathSelected] = useState("");
+  const [elementSelected, setElementSelected] = useState("all");
+  const [pathSelected, setPathSelected] = useState("all");
   const [element, setElement] = useState("");
   const [path, setPath] = useState("");
 
